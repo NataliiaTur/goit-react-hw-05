@@ -1,0 +1,38 @@
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  justify-content: center;
+}
+
+.castItem {
+  width: 150px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  background-color: #fff;
+}
+
+.castItem:hover {
+  transform: scale(1.05);
+}
+
+.actorImg {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.actorName {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.actorCharacter {
+  color: #666;
+  font-size: 14px;
+}

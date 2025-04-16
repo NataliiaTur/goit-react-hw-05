@@ -1,0 +1,45 @@
+.wrapperAllDetail {
+  padding: 10px;
+}
+.button {
+  margin-bottom: 10px;
+}
+
+.wrapperImgText {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.wrapperText {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wordsByFilm {
+  font-weight: bolder;
+}
+
+.img {
+  margin-bottom: 20px;
+}
+
+.wrapperAddInfo {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.link {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  background-color: #e0e0e0;
+}
