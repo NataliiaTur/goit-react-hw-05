@@ -1,0 +1,14 @@
+.page {
+  padding: 30px 20px;
+  background: radial-gradient(ellipse at top, #0b0c2a 0%, #000000 100%);
+  min-height: 100vh;
+  color: #e0e0ff;
+}
+
+.title {
+  font-size: 32px;
+  color: #f9d342;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 8px #f9d342;
+}

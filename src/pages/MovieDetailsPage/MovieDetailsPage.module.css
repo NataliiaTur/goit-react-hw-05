@@ -1,45 +1,107 @@
 .wrapperAllDetail {
-  padding: 10px;
+  padding: 20px;
+  color: #e0e0ff;
+  background-color: #0a0a23;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
 }
+
 .button {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  padding: 10px 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4d4dff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background-color: #6c63ff;
+  box-shadow: 0 0 10px #6c63ff;
 }
 
 .wrapperImgText {
   display: flex;
   gap: 20px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
 }
 
 .wrapperText {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 16px;
+  font-size: 16px;
 }
 
 .wordsByFilm {
-  font-weight: bolder;
+  font-weight: bold;
+  color: #00f0ff;
 }
 
 .img {
-  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
 }
 
 .wrapperAddInfo {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #12122b;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.1);
 }
 
 .link {
   display: inline-block;
-  color: #007bff;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: #1f1f3d;
   text-decoration: none;
   font-weight: bold;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .link:hover {
-  background-color: #e0e0e0;
+  background-color: #4d4dff;
+  box-shadow: 0 0 8px #4d4dff;
+}
+.active {
+  color: #f9d342; /* Золотистий акцент */
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px #f9d342, 0 0 20px #f9d342;
+}
+.errorWrapper {
+  padding: 40px;
+  text-align: center;
+  color: #f9d342;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #000000 100%);
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  box-shadow: 0 0 20px #f9d342;
+}
+.errorMessage {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.errorButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid #f9d342;
+  color: #f9d342;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.errorButton:hover {
+  background-color: #f9d342;
+  color: #000;
 }

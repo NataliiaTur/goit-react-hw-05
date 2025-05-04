@@ -9,7 +9,14 @@ const NotFoundPage = () => {
     }, 3000);
     return () => clearTimeout(timer);
   }, [navigate]);
-  return <div>Page not found. Returning to the main page</div>;
+  return (
+    <div className={css.container}>
+      <div className={css.message}>Page not found</div>
+      <div className={css.returnText}>
+        Returning to the main page in 3 seconds...
+      </div>
+    </div>
+  );
 };
 
 export default NotFoundPage;

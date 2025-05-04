@@ -21,6 +21,17 @@ const MovieReviews = () => {
     fetchMovieReviews();
   }, [movieId]);
 
+  const truncateReview = (review, length = 200) => {
+    if (review.length <= length) return review;
+    return review.slice(0, length) + "...";
+  };
+
+  const [expandedReview, setExpandedReview] = useState(null);
+
+  const toggleReview = (id) => {
+    setExpandedReview(expandedReview === id ? null : id);
+  };
+
   return (
     <div>
       {error && <p>Ops! Something went wrong...</p>}
@@ -29,9 +40,21 @@ const MovieReviews = () => {
       ) : (
         <ul className={css.reviewsList}>
           {reviews.map((review) => (
-            <li key={review.id}>
+            <li key={review.id} className={css.reviewItem}>
               <h4>Author: {review.author}</h4>
-              <p>{review.content}</p>
+              <p>
+                {expandedReview === review.id
+                  ? review.content
+                  : truncateReview(review.content)}
+              </p>
+              {review.content.length > 200 && (
+                <button
+                  className={css.toggleButton}
+                  onClick={() => toggleReview(review.id)}
+                >
+                  {expandedReview === review.id ? "Show Less" : "Read More"}
+                </button>
+              )}
             </li>
           ))}
         </ul>

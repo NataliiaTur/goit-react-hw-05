@@ -13,10 +13,10 @@ const Navigate = () => {
     <header className={css.header}>
       <nav className={css.nav}>
         <NavLink to="/" end className={buildLinkClass}>
-          Home Page
+          Home
         </NavLink>
         <NavLink to="/movies" end className={buildLinkClass}>
-          MoviesPage
+          Movies
         </NavLink>
       </nav>
     </header>

@@ -4,35 +4,44 @@
   gap: 20px;
   padding: 0;
   justify-content: center;
+  background-color: #0a0a23;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
 }
 
 .castItem {
-  width: 150px;
+  width: 160px;
   text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-  background-color: #fff;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px;
+  background-color: #1a1a40;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .castItem:hover {
-  transform: scale(1.05);
+  transform: scale(1.06);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
 }
 
 .actorImg {
-  border-radius: 8px;
+  border-radius: 10px;
   width: 100%;
   height: auto;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
 }
 
 .actorName {
   font-weight: bold;
+  color: #ffffff;
   margin-top: 10px;
+  font-size: 16px;
 }
 
 .actorCharacter {
-  color: #666;
+  color: #00e6e6;
   font-size: 14px;
+  margin-top: 4px;
 }

@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { searchMovies } from "../../api/searchMovies.js";
 import MovieList from "../../components/MovieList/MovieList.jsx";
+import css from "./MoviesPage.module.css";
 
 const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -32,14 +33,14 @@ const MoviesPage = () => {
   }, [query]);
 
   return (
-    <div>
+    <div className={css.page}>
       <SearchForm onSearch={handleSearch} />
       {movies.length > 0 ? (
         <MovieList movies={movies} />
       ) : (
-        query && <p>No movies found for "{query}"</p>
+        query && <p className={css.message}>No movies found for "{query}"</p>
       )}
-      {error && <p>{error}</p>}
+      {error && <p className={css.message}>{error}</p>}
     </div>
   );
 };

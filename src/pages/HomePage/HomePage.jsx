@@ -22,8 +22,8 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Trending Today</h1>
+    <div className={css.page}>
+      <h1 className={css.title}>Trending Today</h1>
       <MovieList movies={movies} />
     </div>
   );

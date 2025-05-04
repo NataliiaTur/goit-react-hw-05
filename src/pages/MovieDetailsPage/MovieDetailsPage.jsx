@@ -13,6 +13,8 @@ const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
 
+  const [activeTab, setActiveTab] = useState("cast");
+
   const defaultImg =
     "https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg";
 
@@ -28,7 +30,21 @@ const MovieDetailsPage = () => {
     fetchDetails();
   }, [movieId]);
 
-  if (!movie) return <p>Try a different search term.</p>;
+  if (!movie)
+    return (
+      <div className={css.errorWrapper}>
+        <p className={css.errorMessage}>
+          Sorry, movie not found. Please try a different search term.
+        </p>
+        <button onClick={() => navigate("/movies")} className={css.errorButton}>
+          Go to Movies
+        </button>
+      </div>
+    );
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
 
   return (
     <div className={css.wrapperAllDetail}>
@@ -72,10 +88,18 @@ const MovieDetailsPage = () => {
       </div>
       <div className={css.wrapperAddInfo}>
         <p className={css.wordsByFilm}>Additional Information</p>
-        <Link to="cast" className={css.link}>
+        <Link
+          to="cast"
+          className={`${css.link} ${activeTab === "cast" ? css.active : ""}`}
+          onClick={() => handleTabClick("cast")}
+        >
           Cast
         </Link>
-        <Link to="reviews" className={css.link}>
+        <Link
+          to="reviews"
+          className={`${css.link} ${activeTab === "reviews" ? css.active : ""}`}
+          onClick={() => handleTabClick("reviews")}
+        >
           Reviews
         </Link>
       </div>

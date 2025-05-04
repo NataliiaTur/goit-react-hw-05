@@ -1,0 +1,13 @@
+.page {
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #0b0c2a, #000000);
+  min-height: 100vh;
+  color: #e0e0ff;
+}
+
+.message {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+  color: #ff6b6b;
+}
